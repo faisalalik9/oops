@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-class temp_guage
-{
+
+class temp_guage{
     public:
     double current_temp;
     double req_temp;
@@ -14,26 +14,21 @@ class temp_guage
         cin>>req_temp;
     }
 };
-class Switch
-{
+
+class Switch{
     public:
-    void on()
-    {
+    void on(){
         cout<<"switch is on"<<endl;
     }
-    void off()
-    {
+    void off(){
         cout<<"switch is off"<<endl;
     }
-    void no()
-    {
-        
-{
+    void no(){
         cout<<"status remains unchanged"<<endl;
     }
 };
-class thermostat:public temp_guage,public Switch
-{
+
+class thermostat:public temp_guage,public Switch{
     public:
     void test()
     {
@@ -45,8 +40,8 @@ class thermostat:public temp_guage,public Switch
     Switch::no();
     }
 };
-int main()
-{
+
+int main(){
     thermostat x;
     x.get_temp();
     x.test();
