@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 class Time{
@@ -27,17 +27,19 @@ void addTime(Time &t1, Time &t2){
     temp.sec = t1.sec + t2.sec;
 
     if(temp.sec >= 60){
-        temp.sec = temp.sec - 60;
-        temp.min = temp.min+1;
+        int k = temp.sec/60;
+        temp.sec = temp.sec%60;
+        temp.min = temp.min+k;
     }
 
     if(temp.min>=60){
-        temp.min = temp.min - 60;
-        temp.hour = temp.hour + 1;
+        int k = temp.min/60;
+        temp.min = temp.min%60;
+        temp.hour = temp.hour + k;
     }
 
     if(temp.hour>=24){
-        temp.hour = temp.hour - 24;
+        temp.hour = temp.hour%24;
     
     }
 
